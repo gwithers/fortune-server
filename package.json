@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/george.withers/alpha"
+    "url": "https://github.com/gwithers/fortune-server"
   },
   "engines": {
     "node": "5.11.0"
