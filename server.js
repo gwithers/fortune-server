@@ -3,8 +3,21 @@ var app = express();
 var fteller = require('fortune-teller');
 var alpha_message = require('./server_helper.js');
 
-app.get('/', function (req, res) {
-  res.send(fteller.fortune());
+app.get('/api/v1/fortune', function (request, response) {
+  var fortune = fteller.fortune();
+  response.format({
+    'text/plain': function() {
+      response.send(fortune);
+    },
+
+    'text/html': function() {
+      response.send('<h3>motd..</h3><p><pre>' + fortune + '</pre></p>');
+    },
+
+    'application/json': function() {
+      response.send({ fortune: fortune });
+    }
+  });
 });
 
 app.listen(3000, function () {
