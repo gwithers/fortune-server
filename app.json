@@ -1,0 +1,8 @@
+{
+  "name": "Fortune Cookie Server and API",
+  "description": "A simple express node.js app",
+  "repository": "https://github.com/gwithers/fortune-server",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express"],
+  "image": "heroku/nodejs"
+}
