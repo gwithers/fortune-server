@@ -20,7 +20,7 @@ app.get('/api/v1/fortune', function (request, response) {
   });
 });
 
-app.set('port', (process.env.FORTUNE_SERVER_PORT || 3000));
+app.set('port', (process.env.FORTUNE_SERVER_PORT || 5000));
 app.listen(app.get('port'), function () {
   console.log('Fortune Server app listening on port ' + app.get('port') + '!');
 });
