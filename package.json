@@ -1,0 +1,24 @@
+{
+  "name": "fortune-server",
+  "version": "0.0.1",
+  "description": "A simple fortune-teller server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "fortune-teller": "~0",
+    "express": "3.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/george.withers/alpha"
+  },
+  "engines": {
+    "node": "5.11.0"
+  },
+  "keywords": [
+    "node"
+  ],
+  "license": "MIT"
+}
