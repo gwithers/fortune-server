@@ -4,6 +4,14 @@ var fteller = require('fortune-teller');
 var routes = require('./routes.js');
 var helper = require('./server_helper.js');
 
+app.get('/', function(request, response) {
+  response.format({
+    'text/html': function() {
+      response.send('OK');
+    }
+  });
+});
+
 app.get('/api/v1/fortune', function (request, response) {
   var fortune = fteller.fortune();
   response.format({
