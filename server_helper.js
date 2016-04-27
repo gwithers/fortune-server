@@ -1,5 +1,5 @@
 var title = function() {
-  return "motd..";
+  return "motd ...";
 };
 
 exports.title = title;
