@@ -1,10 +1,6 @@
-var m1 = function() {
-  return "A";
-}
+var title = function() {
+  return "motd..";
+};
 
-var m2 = function() {
-  return "B";
-}
+exports.title = title;
 
-exports.m1 = m1
-exports.m2 = m2

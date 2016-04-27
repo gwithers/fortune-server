@@ -1,7 +1,8 @@
 var express = require('express');
 var app = express();
 var fteller = require('fortune-teller');
-var alpha_message = require('./server_helper.js');
+var routes = require('./routes.js');
+var helper = require('./server_helper.js');
 
 app.get('/api/v1/fortune', function (request, response) {
   var fortune = fteller.fortune();
@@ -11,7 +12,7 @@ app.get('/api/v1/fortune', function (request, response) {
     },
 
     'text/html': function() {
-      response.send('<h3>motd..</h3><p><pre>' + fortune + '</pre></p>');
+      response.send('<h3>' + helper.title() + '</h3><p><pre>' + fortune + '</pre></p>');
     },
 
     'application/json': function() {
