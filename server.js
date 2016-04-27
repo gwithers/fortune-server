@@ -20,7 +20,7 @@ app.get('/api/v1/fortune', function (request, response) {
     },
 
     'text/html': function() {
-      response.send('<h3>' + helper.title() + '</h3><p><pre>' + fortune + '</pre></p>');
+      response.send('<head><title>Fortune!</title></head><h3>' + helper.title() + '</h3><p><pre>' + fortune + '</pre></p>');
     },
 
     'application/json': function() {
