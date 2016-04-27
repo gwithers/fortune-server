@@ -16,9 +16,9 @@
     "express": "4.x"
   },
   "devDependencies": {
-    "jshint": "",
-    "mocha": "",
-    "chai": ""
+    "jshint": "latest",
+    "mocha": "latest",
+    "chai": "latest"
   },
   "repository": {
     "type": "git",
