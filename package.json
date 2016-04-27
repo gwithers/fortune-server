@@ -19,6 +19,7 @@
     "jshint": "latest",
     "mocha": "latest",
     "chai": "latest",
+    "should": "latest",
     "zombie": "latest"
   },
   "repository": {
