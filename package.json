@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node server.js",
     "lint": "jshint **.js",
-    "test": "mocha spec/**.js"
+    "test": "mocha test/*/**.js"
   },
   "dependencies": {
     "fortune-teller": "~0",
