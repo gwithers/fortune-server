@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node server.js",
     "lint": "jshint **.js",
-    "test": "mocha test/"
+    "test": "mocha spec/**.js"
   },
   "dependencies": {
     "fortune-teller": "~0",
@@ -18,7 +18,8 @@
   "devDependencies": {
     "jshint": "latest",
     "mocha": "latest",
-    "chai": "latest"
+    "chai": "latest",
+    "zombie": "latest"
   },
   "repository": {
     "type": "git",
