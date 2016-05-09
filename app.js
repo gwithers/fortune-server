@@ -18,13 +18,17 @@ app.get('/readme.md', function(request, response) {
 
 app.get('/api/v1/fortune', function (request, response) {
   var fortune = fteller.fortune();
+  response.locals = {
+    title: helper.title(),
+    fortune: fortune
+  };
   response.format({
     'text/plain': function() {
       response.send(fortune);
     },
 
     'text/html': function() {
-      response.send('<head><title>Fortune!</title></head><h3>' + helper.title() + '</h3><p><pre>' + fortune + '</pre></p>');
+      response.render('motd.ejs');
     },
 
     'application/json': function() {
