@@ -7,13 +7,14 @@
     "email": "george.withers@gmail.com"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node app.js",
     "lint": "jshint **.js",
     "test": "mocha test/*/**.js"
   },
   "dependencies": {
     "fortune-teller": "~0",
-    "express": "4.x"
+    "express": "~4.8",
+    "ejs": "latest"
   },
   "devDependencies": {
     "jshint": "latest",

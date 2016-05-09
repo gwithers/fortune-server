@@ -12,6 +12,10 @@ app.get('/', function(request, response) {
   });
 });
 
+app.get('/readme.md', function(request, response) {
+  response.sendFile(__dirname + '/README.md');
+});
+
 app.get('/api/v1/fortune', function (request, response) {
   var fortune = fteller.fortune();
   response.format({
