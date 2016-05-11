@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var fteller = require('fortune-teller');
 var routes = require('./routes.js');
-var helper = require('./server_helper.js');
+var helper = require('./helpers/server_helper.js');
 
 app.get('/', function(request, response) {
   response.format({
