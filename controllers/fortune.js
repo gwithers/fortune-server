@@ -4,7 +4,7 @@
 
 var helper = require('./helpers/server_helper.js');
 
-exports.list = function (request, response) {
+var action = function (request, response) {
   var fortune = fteller.fortune();
   response.locals = {
     title: helper.title(),
@@ -23,4 +23,6 @@ exports.list = function (request, response) {
       response.send({ fortune: fortune });
     }
   });
-});
+};
+
+exports.list = action;

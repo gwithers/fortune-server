@@ -15,7 +15,7 @@ end
 
 Dir.chdir APP_ROOT do
   puts "npm Installation(s)"
-#  execute "nvm use"
+  execute "nvm use"
   execute "npm prune"
   execute "npm install"
 end
