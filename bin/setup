@@ -14,8 +14,6 @@ def execute(cmd)
 end
 
 Dir.chdir APP_ROOT do
-  puts "nvm"
-  execute "source ~/.nvm/nvm.sh; nvm install"
   puts "npm Installation(s)"
   execute "npm prune"
   execute "npm install"
