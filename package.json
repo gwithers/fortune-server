@@ -9,7 +9,9 @@
   "scripts": {
     "start": "node app.js",
     "lint": "jshint **.js",
-    "test": "mocha test/*/**.js"
+    "test": "mocha test/*/**.js",
+    "build": "npm run webpack-build",
+    "webpack-build": "webpack --config tools/webpack.config.js --colors"
   },
   "dependencies": {
     "fortune-teller": "~0",
@@ -21,7 +23,12 @@
     "mocha": "latest",
     "chai": "latest",
     "should": "latest",
-    "zombie": "latest"
+    "zombie": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "babel-preset-react": "latest",
+    "babel-loader": "latest",
+    "babel-core": "latest"
   },
   "repository": {
     "type": "git",
@@ -32,6 +39,9 @@
   },
   "keywords": [
     "node",
+    "es6",
+    "react",
+    "webpack",
     "simple"
   ],
   "license": "ISC"

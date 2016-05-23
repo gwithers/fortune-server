@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+require 'pathname'
+
+APP_ROOT = Pathname.new File.expand_path('../../',  __FILE__)
+
+def execute(cmd)
+  system cmd
+  exit_status = $?.exitstatus
+
+  if exit_status != 0
+    puts "\nSETUP FAILURE: Error running '#{cmd}'\n\n"
+    exit(exit_status)
+  end
+end
+
+Dir.chdir APP_ROOT do
+  puts "npm Installation(s)"
+#  execute "nvm use"
+  execute "npm prune"
+  execute "npm install"
+end
