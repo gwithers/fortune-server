@@ -14,9 +14,11 @@
     "webpack-build": "webpack --config tools/webpack.config.js --colors"
   },
   "dependencies": {
+    "compression": "~1",
     "fortune-teller": "~0",
     "express": "~4.8",
-    "ejs": "latest"
+    "ejs": "latest",
+    "webpack": "~1"
   },
   "devDependencies": {
     "jshint": "latest",
