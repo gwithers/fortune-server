@@ -1,5 +1,8 @@
+var compression = require('compression');
 var express = require('express');
 var app = express();
+app.use(compression());
+
 var fteller = require('fortune-teller');
 var routes = require('./routes.js');
 var helper = require('./helpers/server_helper.js');
