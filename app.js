@@ -5,7 +5,7 @@ app.use(compression());
 
 var fteller = require('fortune-teller');
 var routes = require('./routes.js');
-var fortune_controller = require('./controllers/fortune.js');
+var helper = require('./helpers/server_helper.js');
 
 app.get('/', function(request, response) {
   response.format({
@@ -19,7 +19,26 @@ app.get('/readme.md', function(request, response) {
   response.sendFile(__dirname + '/README.md');
 });
 
-app.get('/api/v1/fortune', fortune_controller);
+app.get('/api/v1/fortune', function (request, response) {
+  var fortune = fteller.fortune();
+  response.locals = {
+    title: helper.title(),
+    fortune: fortune
+  };
+  response.format({
+    'text/plain': function() {
+      response.send(fortune);
+    },
+
+    'text/html': function() {
+      response.render('motd.ejs');
+    },
+
+    'application/json': function() {
+      response.send({ fortune: fortune });
+    }
+  });
+});
 
 app.set('port', (process.env.PORT || 3000));
 app.listen(app.get('port'), function () {
