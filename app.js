@@ -7,6 +7,8 @@ var fteller = require('fortune-teller');
 var routes = require('./routes.js');
 var helper = require('./helpers/server_helper.js');
 
+const path = require('path');
+
 app.get('/', function(request, response) {
   response.format({
     'text/html': function() {
@@ -15,8 +17,8 @@ app.get('/', function(request, response) {
   });
 });
 
-app.get('/readme.md', function(request, response) {
-  response.sendFile(__dirname + '/README.md');
+app.get('/readme', function(request, response) {
+  response.sendFile(path.join(__dirname, 'README.md'));
 });
 
 app.get('/api/v1/fortune', function (request, response) {
