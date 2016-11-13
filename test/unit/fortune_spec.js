@@ -8,4 +8,11 @@ describe('Fortune', function() {
     fortune1.should.not.equal(fortune2);
     done();
   });
+
+  it ('sadly seems to fail', function (done) {
+    var one = 1;
+    var two = '';
+    one.should.equal(two);
+    done();
+  });
 });
