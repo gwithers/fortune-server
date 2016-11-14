@@ -23,6 +23,10 @@ app.get('/readme', function(request, response) {
   response.sendFile(path.join(__dirname, 'README.md'));
 });
 
+app.get('/version', function(request, response) {
+  response.send("v1");
+});
+
 app.get('/api/v1/fortune', function (request, response) {
   var fortune = fteller.fortune();
   response.locals = {
