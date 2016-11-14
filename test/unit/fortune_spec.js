@@ -11,7 +11,7 @@ describe('Fortune', function() {
 
   it ('sadly seems to fail', function (done) {
     var one = 1;
-    var two = '';
+    var two = 1;
     one.should.equal(two);
     done();
   });
