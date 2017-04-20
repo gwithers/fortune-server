@@ -11,10 +11,11 @@ var helper = require('./helpers/server_helper.js');
 
 const path = require('path');
 
+// For CI tool to check deployment
 app.get('/', function(request, response) {
   response.format({
     'text/html': function() {
-      response.send('OK');
+      response.send('OK - Hi Dima!');
     }
   });
 });
