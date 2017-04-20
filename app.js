@@ -16,7 +16,7 @@ const path = require('path');
 app.get('/', function(request, response) {
   response.format({
     'text/html': function() {
-      response.send('OK - Hi Dima!');
+      response.send('OK - Hi Dima!!');
     }
   });
 });
