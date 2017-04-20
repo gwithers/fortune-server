@@ -9,8 +9,9 @@ var fteller = require('fortune-teller');
 var routes = require('./routes.js');
 var helper = require('./helpers/server_helper.js');
 
-const path = require('path');
+path = require('path');
 
+// TODO: add comment
 app.get('/', function(request, response) {
   response.format({
     'text/html': function() {
